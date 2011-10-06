@@ -663,7 +663,7 @@ static NSUInteger defaultBatchSize = kMagicalRecordDefaultBatchSize;
 
 - (id) inThreadContext 
 {
-    __weak NSManagedObject *weakSelf = self;
+    __unsafe_unretained NSManagedObject *weakSelf = self;
     return [weakSelf inContext:[NSManagedObjectContext contextForCurrentThread]];
 }
 
