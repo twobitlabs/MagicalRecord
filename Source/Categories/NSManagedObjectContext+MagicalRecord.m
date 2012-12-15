@@ -30,10 +30,8 @@ static NSString const * kMagicalRecordManagedObjectContextKey = @"MagicalRecord_
 
 + (void) MR_setDefaultContext:(NSManagedObjectContext *)moc
 {
-#ifndef NS_AUTOMATED_REFCOUNT_UNAVAILABLE
     [moc retain];
     [defaultManageObjectContext_ release];
-#endif
     defaultManageObjectContext_ = moc;
 }
 
