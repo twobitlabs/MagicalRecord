@@ -213,10 +213,16 @@ NSString * const kMagicalRecordPSCDidCompleteiCloudSetupNotification = @"kMagica
         {
             MRLog(@"iCloud is not enabled");
         }
-        
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [self lock];
+#pragma clang diagnostic pop
         [self MR_addSqliteStoreNamed:localStoreName withOptions:options];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [self unlock];
+#pragma clang diagnostic pop
 
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([NSPersistentStore MR_defaultPersistentStore] == nil)
