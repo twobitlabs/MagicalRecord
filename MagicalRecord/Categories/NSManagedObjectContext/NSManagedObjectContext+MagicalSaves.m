@@ -41,11 +41,8 @@
     if (![self hasChanges]) {
         MRLog(@"NO CHANGES IN ** %@ ** CONTEXT - NOT SAVING", [self MR_workingName]);
 
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(NO, nil);
-            });
+        if (completion) {
+            completion(NO, nil);
         }
         
         return;
