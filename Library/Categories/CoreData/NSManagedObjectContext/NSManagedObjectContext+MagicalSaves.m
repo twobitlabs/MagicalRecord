@@ -109,7 +109,7 @@
 
         if (saveParentContexts && [self parentContext])
         {
-            MRLogVerbose(@"Proceeding to save parent context %@", [[self parentContext] MR_description]);
+            // MRLogVerbose(@"Proceeding to save parent context %@", [[self parentContext] MR_description]);
         }
         else
         {
