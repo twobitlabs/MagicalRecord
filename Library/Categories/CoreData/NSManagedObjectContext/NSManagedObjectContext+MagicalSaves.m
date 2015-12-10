@@ -136,7 +136,10 @@
         {
             saved = [self save:&error];
         }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-exception-parameter"
         @catch (NSException *exception)
+#pragma clang diagnostic pop
         {
             MRLogError(@"Unable to perform save: %@", (id)[ exception userInfo ] ?: (id)[ exception reason ]);
         }

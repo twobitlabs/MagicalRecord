@@ -111,7 +111,10 @@ NSString *const kMagicalRecordImportAttributeUseDefaultValueWhenNotPresent = @"u
         [invocation setArgument:&relatedObject atIndex:2];
         [invocation invokeWithTarget:relationshipSource];
     }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-exception-parameter"
     @catch (NSException *exception)
+#pragma clang diagnostic pop
     {
         MRLogError(@"Adding object for relationship failed: %@\n", relationshipInfo);
         MRLogError(@"relatedObject.entity %@", [relatedObject entity]);
@@ -172,7 +175,10 @@ NSString *const kMagicalRecordImportAttributeUseDefaultValueWhenNotPresent = @"u
         {
             relatedObjectData = [relationshipData valueForKeyPath:lookupKey];
         }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-exception-parameter"
         @catch (NSException *exception)
+#pragma clang diagnostic pop
         {
             MRLogWarn(@"Looking up a key for relationship failed while importing: %@\n", relationshipInfo);
             MRLogWarn(@"lookupKey: %@", lookupKey);
