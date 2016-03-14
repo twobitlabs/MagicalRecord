@@ -173,13 +173,14 @@
 - (BOOL)MR_deleteEntityInContext:(NSManagedObjectContext *)context
 {
     NSError *retrieveExistingObjectError;
-    NSManagedObject *objectInContext = [context existingObjectWithID:[self objectID] error:&retrieveExistingObjectError];
+    NSManagedObject *entityInContext = [context existingObjectWithID:[self objectID] error:&retrieveExistingObjectError];
 
     [[retrieveExistingObjectError MR_coreDataDescription] MR_logToConsole];
+    if (entityInContext) {
+        [context deleteObject:entityInContext];
+    }
 
-    [context deleteObject:objectInContext];
-
-    return [objectInContext MR_isEntityDeleted];
+    return YES;
 }
 
 + (BOOL)MR_deleteAllMatchingPredicate:(NSPredicate *)predicate
