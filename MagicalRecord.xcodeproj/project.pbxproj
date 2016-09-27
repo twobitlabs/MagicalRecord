@@ -1547,6 +1547,7 @@
 		9053F56E19E0244C00137362 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_NONNULL = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Support/MagicalRecord-Info.plist";
@@ -1560,6 +1561,7 @@
 		9053F57019E0244C00137362 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_NONNULL = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Support/MagicalRecord-Info.plist";
