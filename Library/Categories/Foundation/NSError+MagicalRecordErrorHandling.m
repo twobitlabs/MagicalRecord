@@ -27,7 +27,7 @@ NSString *MR_errorSummaryFromErrorCode(NSInteger errorCode)
     NSString *summary = [errorCodes objectForKey:@(errorCode)];
     if (summary == nil)
     {
-        summary = [NSString stringWithFormat:@"Unknown Core Data Error Code (%zd)", errorCode];
+        summary = [NSString stringWithFormat:@"Unknown Core Data Error Code (%@)", @(errorCode)];
     }
     return summary;
 }
@@ -83,7 +83,7 @@ NSString *MR_errorSummaryFromErrorCode(NSInteger errorCode)
     {
         return [[self userInfo] objectForKey:@"conflictList"];
     }
-    return [NSString stringWithFormat:@"(%zd) %@ [%@]", errorCode, MR_errorSummaryFromErrorCode(errorCode), [self MR_validationErrorObject] ?: [[self userInfo] objectForKey:@"reason"]];
+    return [NSString stringWithFormat:@"(%@) %@ [%@]", @(errorCode), MR_errorSummaryFromErrorCode(errorCode), [self MR_validationErrorObject] ?: [[self userInfo] objectForKey:@"reason"]];
 }
 
 - (NSString *)MR_coreDataDescription
