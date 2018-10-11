@@ -1757,6 +1757,7 @@
 					"-Wno-cast-qual",
 					"-Wno-reserved-id-macro",
 					"-Wno-auto-import",
+					"-Wno-objc-messaging-id",
 				);
 			};
 			name = Debug;
@@ -1845,6 +1846,7 @@
 					"-Wno-cast-qual",
 					"-Wno-reserved-id-macro",
 					"-Wno-auto-import",
+					"-Wno-objc-messaging-id",
 				);
 			};
 			name = Release;
