@@ -1222,11 +1222,11 @@
 			};
 			buildConfigurationList = C721C7A513D0A3750097AB6F /* Build configuration list for PBXProject "MagicalRecord" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = C721C7A013D0A3750097AB6F;
 			productRefGroup = C721C7B113D0A3AF0097AB6F /* Products */;
